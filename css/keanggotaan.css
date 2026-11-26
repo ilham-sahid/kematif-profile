@@ -1,0 +1,696 @@
+/* =========================================================
+   HALAMAN KEANGGOTAAN
+   ========================================================= */
+
+/* =========================================================
+   KEMATIF - CSS TAMBAHAN HALAMAN KEANGGOTAAN
+   Tempelkan seluruh isi file ini di bagian paling bawah
+   style.css utama. Semua class memakai awalan membership-
+   agar tidak mengganggu halaman Beranda, Tentang, dan Struktur.
+   ========================================================= */
+
+/* =========================================================
+   1. HERO KEANGGOTAAN
+   ========================================================= */
+
+.membership-hero {
+	margin-top: -1px;
+	background: linear-gradient(115deg, #ffffff 0%, #eaf7fc 76%);
+}
+
+.membership-hero-inner.container {
+	width: min(84%, 1180px);
+	max-width: 1180px;
+}
+
+.membership-hero-inner {
+	min-height: 275px;
+	display: grid;
+	grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.9fr);
+	align-items: center;
+	gap: 45px;
+	padding-top: 30px;
+	padding-bottom: 35px;
+}
+
+.membership-hero-copy {
+	max-width: 550px;
+}
+
+.membership-breadcrumb {
+	margin: 0 0 10px;
+	color: #728195;
+	font-size: 11px;
+}
+
+.membership-breadcrumb a:hover {
+	color: #009bd2;
+}
+
+.membership-eyebrow,
+.membership-section-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	color: #009bd2;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+}
+
+.membership-eyebrow::before,
+.membership-section-label::before {
+	content: "";
+	width: 15px;
+	height: 2px;
+	display: inline-block;
+	background: #00a5dc;
+}
+
+.membership-hero-copy h1 {
+	margin: 12px 0 10px;
+	color: #092c4b;
+	font-size: clamp(36px, 4vw, 49px);
+	font-weight: 800;
+	letter-spacing: -1.8px;
+	line-height: 1.08;
+}
+
+.membership-hero-description {
+	max-width: 490px;
+	margin: 0;
+	color: #526579;
+	font-size: 13px;
+	line-height: 1.75;
+}
+
+/* Area foto dengan dua kotak bertumpuk seperti desain Figma */
+.membership-hero-visual {
+	position: relative;
+	width: min(100%, 300px);
+	height: 200px;
+	justify-self: end;
+	margin-right: 44px;
+}
+
+.membership-hero-backdrop {
+	position: absolute;
+	top: 30px;
+	right: -44px;
+	width: 84%;
+	height: 84%;
+	border-radius: 20px;
+	background: linear-gradient(135deg, #0aa9d8, #0082b6);
+}
+
+.membership-photo-placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 84%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 19px;
+	color: #009bd2;
+	background: linear-gradient(140deg, #e8f6fc, #cceaf6);
+	box-shadow: 0 12px 24px rgba(9, 44, 75, 0.12);
+	text-align: center;
+}
+
+.membership-photo-placeholder svg {
+	width: 25px;
+	height: 25px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.membership-photo-placeholder small {
+	margin-top: 6px;
+	font-size: 9px;
+}
+
+.membership-photo-placeholder img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* =========================================================
+   2. AREA MANFAAT DAN STATUS PENDAFTARAN
+   ========================================================= */
+
+.membership-main.container,
+.membership-timeline-section.container {
+	width: min(90%, 1240px); /* Disamakan dengan container sebelumnya */
+	max-width: 1240px;
+}
+
+.membership-main {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(300px, 1.05fr); /* Kolom kanan diperlebar dari 230px ke 300px */
+	align-items: start;
+	gap: 36px;
+	margin-top: 52px;
+}
+
+.membership-section-heading {
+	margin-bottom: 22px;
+}
+
+.membership-section-heading h2 {
+	margin: 8px 0 0;
+	color: #092c4b;
+	font-size: 31px; /* Diperbesar dari 25px */
+	font-weight: 800;
+	letter-spacing: -0.7px;
+	line-height: 1.25;
+}
+
+.membership-benefits-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px 18px; /* Jarak antar kartu diperbesar */
+}
+
+.membership-benefit-card {
+	min-width: 0;
+	min-height: 162px; /* Diperbesar dari 128px */
+	padding: 22px; /* Ruang dalam diperbesar dari 16px */
+	border: 1px solid #e0eaf2;
+	border-radius: 19px;
+	background: #ffffff;
+	box-shadow: 0 3px 8px rgba(9, 44, 75, 0.045);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.membership-benefit-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 9px 20px rgba(9, 44, 75, 0.09);
+}
+
+.membership-benefit-card-last {
+	width: 100%;
+	max-width: 330px; /* Disesuaikan dari 252px agar seimbang */
+}
+
+.membership-benefit-icon {
+	width: 44px; /* Diperbesar dari 34px */
+	height: 44px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 14px;
+	border-radius: 12px;
+	color: #ffffff;
+	background: linear-gradient(135deg, #10b6e8, #0088bd);
+	box-shadow: 0 4px 9px rgba(0, 143, 195, 0.18);
+}
+
+.membership-benefit-icon svg {
+	width: 24px; /* Diperbesar dari 19px */
+	height: 24px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.membership-benefit-card h3 {
+	margin: 0 0 8px;
+	color: #092c4b;
+	font-size: 16px; /* Diperbesar dari 12px */
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.membership-benefit-card p {
+	margin: 0;
+	color: #607185;
+	font-size: 13.5px; /* Diperbesar dari 10px */
+	line-height: 1.65;
+}
+
+/* =========================================================
+   3. PANEL STATUS PENDAFTARAN - STATUS DIBUKA
+   ========================================================= */
+
+.membership-status-card {
+	position: relative;
+	overflow: hidden;
+	padding: 28px; /* Ruang dalam diperbesar dari 20px */
+	border-radius: 22px;
+	color: #ffffff;
+	background: linear-gradient(145deg, #09263b, #10466d);
+	box-shadow: 0 10px 22px rgba(9, 44, 75, 0.15);
+}
+
+.membership-status-card::after {
+	content: "";
+	position: absolute;
+	top: -105px;
+	right: -55px;
+	width: 260px; /* Diperbesar dari 220px */
+	height: 260px;
+	border-radius: 50%;
+	background: rgba(0, 166, 216, 0.13);
+	pointer-events: none;
+}
+
+.membership-status-icon {
+	position: relative;
+	z-index: 1;
+	width: 46px; /* Diperbesar dari 36px */
+	height: 46px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 16px;
+	border-radius: 12px;
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.16);
+}
+
+.membership-status-icon svg {
+	width: 24px; /* Diperbesar dari 19px */
+	height: 24px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.membership-status-label {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin-bottom: 11px;
+	color: #20c2ed;
+	font-size: 11px; /* Diperbesar dari 8px */
+	font-weight: 700;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+}
+
+.membership-open-indicator {
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 12px;
+	padding: 6px 12px; /* Diperbesar dari 5px 9px */
+	border: 1px solid rgba(86, 224, 177, 0.35);
+	border-radius: 999px;
+	color: #b9f6de;
+	background: rgba(42, 190, 137, 0.13);
+	font-size: 12px; /* Diperbesar dari 9px */
+	font-weight: 600;
+}
+
+.membership-open-indicator span {
+	width: 7px; /* Diperbesar dari 6px */
+	height: 7px;
+	flex: 0 0 7px;
+	border-radius: 50%;
+	background: #4ee0a4;
+	box-shadow: 0 0 0 3px rgba(78, 224, 164, 0.13);
+}
+
+.membership-status-card h2 {
+	position: relative;
+	z-index: 1;
+	margin: 0 0 12px;
+	color: #ffffff;
+	font-size: 24px; /* Diperbesar dari 19px */
+	font-weight: 800;
+	letter-spacing: -0.35px;
+	line-height: 1.3;
+}
+
+.membership-status-card > p {
+	position: relative;
+	z-index: 1;
+	margin: 0 0 20px;
+	color: #d3e2ec;
+	font-size: 13.5px; /* Diperbesar dari 10px */
+	line-height: 1.65;
+}
+
+.membership-register-button {
+	position: relative;
+	z-index: 1;
+	min-height: 48px; /* Diperbesar dari 38px */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 12px 16px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 12px;
+	color: #073451;
+	background: #ffffff;
+	font-size: 14px; /* Diperbesar dari 10px */
+	font-weight: 700;
+	text-align: center;
+	transition:
+		background 0.2s ease,
+		transform 0.2s ease;
+}
+
+.membership-register-button:hover {
+	transform: translateY(-2px);
+	background: #e8f7fc;
+}
+
+.membership-register-button span {
+	font-size: 18px; /* Diperbesar dari 15px */
+	line-height: 1;
+}
+
+.membership-instagram {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 14px;
+	padding: 12px 14px; /* Diperbesar dari 9px 10px */
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 12px;
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.11);
+	transition: background 0.2s ease;
+}
+
+.membership-instagram:hover {
+	background: rgba(255, 255, 255, 0.18);
+}
+
+.membership-instagram-icon {
+	width: 36px; /* Diperbesar dari 28px */
+	height: 36px;
+	flex: 0 0 36px;
+	display: grid;
+	place-items: center;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.13);
+}
+
+.membership-instagram-icon svg {
+	width: 21px; /* Diperbesar dari 17px */
+	height: 21px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.membership-instagram > span:nth-child(2) {
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.membership-instagram strong {
+	font-size: 13px; /* Diperbesar dari 9px */
+	line-height: 1.2;
+}
+
+.membership-instagram small {
+	color: #d3e2ec;
+	font-size: 11px; /* Diperbesar dari 8px */
+}
+
+.membership-external-arrow {
+	margin-left: auto;
+	color: #c9eaf5;
+	font-size: 16px; /* Diperbesar dari 13px */
+}
+
+/* =========================================================
+   4. TIMELINE PENDAFTARAN
+   ========================================================= */
+
+.membership-timeline-section {
+	margin-top: 52px;
+	margin-bottom: 56px;
+}
+
+.membership-timeline-heading {
+	margin-bottom: 24px;
+}
+
+.membership-timeline-heading h2 {
+	margin-top: 8px;
+	font-size: 31px; /* Disamakan dengan judul bagian Manfaat di atas */
+}
+
+.membership-timeline-heading > p {
+	margin: 10px 0 0;
+	color: #607185;
+	font-size: 14px; /* Diperbesar dari 11px */
+	line-height: 1.6;
+}
+
+.membership-timeline {
+	position: relative;
+	width: min(100%, 620px); /* Diperlebar dari 485px agar lebih proporsional */
+	display: flex;
+	flex-direction: column;
+	gap: 14px; /* Jarak antar tahap diperbesar dari 10px */
+}
+
+/* Aturan .membership-timeline::before sudah dihapus agar garis vertikal hilang */
+
+.membership-timeline-item {
+	position: relative;
+	display: grid;
+	grid-template-columns: 38px minmax(0, 1fr); /* Kolom nomor diperbesar dari 29px */
+	align-items: start;
+	gap: 18px;
+}
+
+.membership-timeline-number {
+	position: relative;
+	z-index: 1;
+	width: 38px; /* Lingkaran nomor diperbesar dari 29px */
+	height: 38px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	color: #ffffff;
+	background: linear-gradient(145deg, #13b5e5, #008abd);
+	box-shadow: 0 4px 9px rgba(0, 143, 195, 0.2);
+	font-size: 14px; /* Diperbesar dari 11px */
+	font-weight: 700;
+}
+
+.membership-timeline-card {
+	min-width: 0;
+	min-height: 94px; /* Diperbesar dari 76px */
+	padding: 16px 20px; /* Ruang dalam diperbesar dari 11px 14px */
+	border: 1px solid #e0eaf2;
+	border-radius: 16px;
+	background: #ffffff;
+	box-shadow: 0 2px 4px rgba(9, 44, 75, 0.035);
+}
+
+.membership-timeline-card > span {
+	display: block;
+	margin-bottom: 5px;
+	color: #009bd2;
+	font-size: 10.5px; /* Teks "STEP 1-4" diperbesar dari 8px */
+	font-weight: 700;
+	letter-spacing: 0.45px;
+	text-transform: uppercase;
+}
+
+.membership-timeline-card h3 {
+	margin: 0 0 6px;
+	color: #092c4b;
+	font-size: 16px; /* Judul tahap diperbesar dari 12px */
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.membership-timeline-card p {
+	margin: 0;
+	color: #607185;
+	font-size: 13.5px; /* Deskripsi tahap diperbesar dari 10px */
+	line-height: 1.55;
+}
+
+/* =========================================================
+   5. RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+	.membership-hero-inner.container,
+	.membership-main.container,
+	.membership-timeline-section.container {
+		width: 90%;
+	}
+
+	.membership-hero-inner {
+		min-height: 250px;
+		grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.9fr);
+		gap: 24px;
+	}
+
+	.membership-hero-copy h1 {
+		font-size: 38px;
+	}
+
+	.membership-hero-visual {
+		width: min(100%, 265px);
+		height: 185px;
+		margin-right: 25px;
+	}
+
+	.membership-hero-backdrop {
+		right: -25px;
+	}
+
+	.membership-main {
+		grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.95fr);
+		gap: 20px;
+	}
+
+	.membership-section-heading h2 {
+		font-size: 22px;
+	}
+
+	.membership-benefit-card {
+		padding: 14px;
+	}
+
+	.membership-status-card {
+		padding: 17px;
+	}
+}
+
+/* =========================================================
+   6. RESPONSIVE TABLET KECIL DAN HP
+   ========================================================= */
+
+@media (max-width: 700px) {
+	.membership-hero-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 22px;
+		padding-top: 28px;
+		padding-bottom: 30px;
+	}
+
+	.membership-hero-copy h1 {
+		font-size: 35px;
+		letter-spacing: -1.1px;
+	}
+
+	.membership-hero-description {
+		font-size: 12px;
+	}
+
+	.membership-hero-visual {
+		width: min(82%, 300px);
+		height: 185px;
+		justify-self: auto;
+		align-self: center;
+		margin-right: 25px;
+	}
+
+	.membership-main {
+		grid-template-columns: 1fr;
+		gap: 22px;
+		margin-top: 34px;
+	}
+
+	.membership-section-heading h2 {
+		font-size: 23px;
+	}
+
+	.membership-benefits-grid {
+		gap: 12px;
+	}
+
+	.membership-benefit-card {
+		min-height: 125px;
+	}
+
+	.membership-benefit-card-last {
+		max-width: none;
+	}
+
+	.membership-status-card {
+		max-width: 420px;
+	}
+
+	.membership-timeline-section {
+		margin-top: 38px;
+		margin-bottom: 38px;
+	}
+}
+
+/* =========================================================
+   7. RESPONSIVE HP KECIL
+   ========================================================= */
+
+@media (max-width: 420px) {
+	.membership-hero-inner.container,
+	.membership-main.container,
+	.membership-timeline-section.container {
+		width: 92%;
+	}
+
+	.membership-hero-copy h1 {
+		font-size: 32px;
+	}
+
+	.membership-benefits-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.membership-benefit-card,
+	.membership-benefit-card-last {
+		max-width: none;
+		min-height: 0;
+	}
+
+	.membership-section-heading h2 {
+		font-size: 21px;
+	}
+
+	.membership-timeline-item {
+		grid-template-columns: 27px minmax(0, 1fr);
+		gap: 10px;
+	}
+
+	.membership-timeline-number {
+		width: 27px;
+		height: 27px;
+	}
+
+	.membership-timeline::before {
+		left: 13px;
+	}
+
+	.membership-timeline-card {
+		padding: 10px 11px;
+	}
+}
