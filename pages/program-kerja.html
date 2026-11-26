@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="view-transition" content="same-origin" />
+		<meta
+			name="description"
+			content="Kenali divisi dan program kerja KEMATIF, mulai dari BPH, Humas, Kominfo, Kewirausahaan, hingga PSDM."
+		/>
+		<title>Divisi &amp; Program Kerja | KEMATIF</title>
+
+		<!-- Font Inter digunakan agar konsisten dengan halaman lainnya -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Menggunakan stylesheet utama project KEMATIF -->
+		<link rel="stylesheet" href="../css/program-kerja.css" />
+		<link rel="stylesheet" href="../style.css" />
+	</head>
+	<body class="work-page">
+		<!-- NAVBAR: menggunakan komponen navbar yang sama dengan halaman lain -->
+		<div id="header-placeholder"></div>
+
+		<main>
+			<!-- HERO: judul halaman dan tempat foto kegiatan divisi -->
+			<section class="work-hero">
+				<div class="work-hero-inner container">
+					<div class="work-hero-copy">
+						<p class="work-breadcrumb">
+							<a href="../index.html">Beranda</a> / Program Kerja
+						</p>
+						<span class="work-eyebrow">Program Kerja</span>
+						<h1>Divisi &amp; Program</h1>
+						<p>Temukan divisi dan program-program yang berpengaruh.</p>
+					</div>
+
+					<!-- Ganti placeholder dengan foto kegiatan divisi jika sudah tersedia -->
+					<div class="work-hero-visual" aria-label="Foto kegiatan divisi">
+						<div class="work-hero-backdrop"></div>
+						<div class="work-photo-placeholder">
+							<img src="../assets/img/foto-lainnya/FotoKegiatan2.jpg" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- DAFTAR DIVISI DAN PROGRAM KERJA -->
+			<section
+				class="work-main container"
+				aria-label="Daftar program kerja berdasarkan divisi"
+			>
+				<!-- Sidebar untuk memilih divisi -->
+				<aside class="work-sidebar">
+					<p class="work-sidebar-heading">Pilih Divisi</p>
+
+					<div
+						class="work-division-list"
+						role="tablist"
+						aria-label="Pilih divisi KEMATIF"
+					>
+						<button
+							class="work-division-tab is-active"
+							type="button"
+							role="tab"
+							id="tab-bph"
+							aria-controls="panel-bph"
+							aria-selected="true"
+							data-division="bph"
+						>
+							<span class="work-tab-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<path
+										d="m12 3 2.7 5.4 6 .9-4.3 4.2 1 6-5.4-2.9-5.4 2.9 1-6-4.3-4.2 6-.9L12 3Z"
+									></path>
+								</svg>
+							</span>
+							<span class="work-tab-text"
+								><strong>BPH</strong><small>6 program</small></span
+							>
+						</button>
+
+						<button
+							class="work-division-tab"
+							type="button"
+							role="tab"
+							id="tab-humas"
+							aria-controls="panel-humas"
+							aria-selected="false"
+							data-division="humas"
+							tabindex="-1"
+						>
+							<span class="work-tab-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<circle cx="9" cy="8" r="3"></circle>
+									<path
+										d="M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20M16 5.5a3 3 0 0 1 0 5.8M17 14a4.5 4.5 0 0 1 3.5 4.4V20"
+									></path>
+								</svg>
+							</span>
+							<span class="work-tab-text"
+								><strong>Humas</strong><small>4 program</small></span
+							>
+						</button>
+
+						<button
+							class="work-division-tab"
+							type="button"
+							role="tab"
+							id="tab-kominfo"
+							aria-controls="panel-kominfo"
+							aria-selected="false"
+							data-division="kominfo"
+							tabindex="-1"
+						>
+							<span class="work-tab-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<path d="M3 10v4h4l10 5V5L7 10H3Z"></path>
+									<path d="m7 14 2 6h4l-3-4M20 9a4 4 0 0 1 0 6"></path>
+								</svg>
+							</span>
+							<span class="work-tab-text"
+								><strong>Kominfo</strong><small>4 program</small></span
+							>
+						</button>
+
+						<button
+							class="work-division-tab"
+							type="button"
+							role="tab"
+							id="tab-kewirausahaan"
+							aria-controls="panel-kewirausahaan"
+							aria-selected="false"
+							data-division="kewirausahaan"
+							tabindex="-1"
+						>
+							<span class="work-tab-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<path
+										d="M14 4c2.5-1.5 5-1.5 6-1-0.5 5-2.5 9-7 11l-4-4c1-3 2.5-4.8 5-6Z"
+									></path>
+									<path
+										d="m9 10-4 1-2 5 6-1M14 14l-1 5-5 2 1-6M5 19l-2 2"
+									></path>
+								</svg>
+							</span>
+							<span class="work-tab-text"
+								><strong>Kewirausahaan</strong><small>3 program</small></span
+							>
+						</button>
+
+						<button
+							class="work-division-tab"
+							type="button"
+							role="tab"
+							id="tab-psdm"
+							aria-controls="panel-psdm"
+							aria-selected="false"
+							data-division="psdm"
+							tabindex="-1"
+						>
+							<span class="work-tab-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<path d="m2.5 8 9.5-5 9.5 5-9.5 5-9.5-5Z"></path>
+									<path d="M6 10v5c3.5 3 8.5 3 12 0v-5M21.5 8v7"></path>
+								</svg>
+							</span>
+							<span class="work-tab-text"
+								><strong>PSDM</strong><small>2 program</small></span
+							>
+						</button>
+					</div>
+				</aside>
+
+				<!-- Konten program berubah ketika tab divisi dipilih -->
+				<div class="work-content">
+					<!-- PROGRAM BPH -->
+					<section
+						class="work-division-panel"
+						id="panel-bph"
+						role="tabpanel"
+						aria-labelledby="tab-bph"
+						data-panel="bph"
+					>
+						<div class="work-summary-card">
+							<div class="work-summary-copy">
+								<h2 id="work-summary-title"></h2>
+								<p id="work-summary-desc"></p>
+							</div>
+							<div
+								class="work-summary-stats"
+								aria-label="Ringkasan program BPH"
+							>
+								<div>
+									<strong id="work-summary-stat"></strong><span>Program</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="work-program-list"></div>
+					</section>
+				</div>
+			</section>
+		</main>
+
+		<!-- Script sederhana untuk mengganti isi saat tab divisi dipilih -->
+		<div id="footer-placeholder"></div>
+
+		<script src="../scripts/layout.js"></script>
+		<script src="../scripts/navbarMobile.js"></script>
+		<script src="../scripts/program-kerja.js"></script>
+	</body>
+</html>
