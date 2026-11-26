@@ -1,0 +1,427 @@
+/* =========================================================
+   8. HALAMAN TENTANG KEMATIF - HERO
+   ========================================================= */
+
+.about-v2-hero {
+	overflow: hidden;
+	background: linear-gradient(115deg, #ffffff 0%, #f4fbfe 45%, #e7f6fc 100%);
+}
+
+.about-v2-hero-inner.container {
+	width: min(92%, 1440px);
+	max-width: 1440px;
+}
+
+.about-v2-hero-inner {
+	min-height: 340px;
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	align-items: center;
+	gap: 55px;
+	padding-top: 34px;
+	padding-bottom: 38px;
+}
+
+.about-v2-hero-copy {
+	padding: 8px 0;
+}
+
+.about-v2-breadcrumb {
+	margin: 0 0 16px;
+	color: #68798b;
+	font-size: 13px;
+}
+
+.about-v2-breadcrumb a:hover {
+	color: #009bd2;
+}
+
+.about-v2-label {
+	display: block;
+	margin-bottom: 14px;
+	color: #009bd2;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.65px;
+}
+
+.about-v2-label::before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 2px;
+	margin-right: 9px;
+	vertical-align: middle;
+	border-radius: 3px;
+	background: #00a5db;
+}
+
+.about-v2-hero-copy h1 {
+	margin: 0 0 14px;
+	color: #092c4b;
+	font-size: clamp(42px, 4.2vw, 60px);
+	font-weight: 800;
+	line-height: 1.08;
+	letter-spacing: -2px;
+}
+
+.about-v2-hero-description {
+	margin: 0;
+	color: #566b7e;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+/* Area foto hero Tentang */
+.about-v2-hero-visual {
+	position: relative;
+	width: 100%;
+	max-width: 390px;
+	height: 265px;
+	justify-self: end;
+}
+
+.about-v2-hero-backdrop {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 82%;
+	height: 84%;
+	border-radius: 20px;
+	background: linear-gradient(140deg, #0ba9d8, #0086b8);
+}
+
+.about-v2-photo-placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 82%;
+	height: 84%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 20px;
+	color: #009bd2;
+	background: linear-gradient(145deg, #e8f6fc, #cceaf6);
+	box-shadow: 0 9px 20px rgba(8, 42, 70, 0.12);
+}
+
+.about-v2-photo-placeholder svg {
+	width: 28px;
+	height: 28px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.about-v2-photo-placeholder small {
+	margin-top: 9px;
+	font-size: 11px;
+}
+
+.about-v2-photo-placeholder img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* =========================================================
+   9. HALAMAN TENTANG KEMATIF - PROFIL DAN NAVIGASI SISI
+   ========================================================= */
+
+.about-v2-main.container {
+	width: min(92%, 1440px);
+	max-width: 1440px;
+}
+
+.about-v2-main {
+	display: grid;
+	grid-template-columns: 215px minmax(0, 1fr);
+	align-items: start;
+	gap: 42px;
+	padding-top: 58px;
+	padding-bottom: 65px;
+}
+
+.about-v2-sidebar {
+	position: sticky;
+	top: 92px;
+	align-self: start;
+}
+
+.about-v2-toc {
+	padding: 16px;
+	border: 1px solid #e0eaf2;
+	border-radius: 19px;
+	background: #ffffff;
+	box-shadow: 0 5px 14px rgba(9, 44, 75, 0.07);
+}
+
+.about-v2-toc > p {
+	margin: 0 0 9px;
+	padding: 0 2px;
+	color: #69798b;
+	font-size: 11px;
+	letter-spacing: 0.7px;
+}
+
+.about-v2-toc a {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 4px;
+	padding: 12px 11px;
+	border-radius: 10px;
+	color: #34485d;
+	font-size: 14px;
+	transition:
+		color 0.2s ease,
+		background 0.2s ease;
+}
+
+.about-v2-toc a span {
+	color: #718296;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.about-v2-toc a:hover,
+.about-v2-toc a.about-v2-toc-active {
+	color: #008fc7;
+	background: #eaf7fc;
+}
+
+.about-v2-toc a.about-v2-toc-active span,
+.about-v2-toc a:hover span {
+	color: #008fc7;
+}
+
+.about-v2-content {
+	min-width: 0;
+}
+
+.about-v2-profile h2,
+.about-v2-section-heading h2 {
+	margin: 0 0 16px;
+	color: #092c4b;
+	font-size: 32px;
+	line-height: 1.2;
+	letter-spacing: -0.8px;
+}
+
+.about-v2-profile > p {
+	margin: 0;
+	color: #596c80;
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+.about-v2-quote {
+	min-height: 96px;
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	margin: 20px 0 0;
+	padding: 20px 28px;
+	border: 1px solid #e0edf5;
+	border-radius: 17px;
+	background: linear-gradient(110deg, #f3faff, #eaf6fc);
+}
+
+.about-v2-quote span {
+	color: #00a4d9;
+	font-family: Georgia, serif;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 0.7;
+}
+
+.about-v2-quote strong {
+	color: #092c4b;
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+/* =========================================================
+   10. HALAMAN TENTANG KEMATIF - VISI DAN MISI
+   ========================================================= */
+
+.about-v2-vision-section {
+	margin-top: 60px;
+}
+
+.about-v2-section-heading {
+	margin-bottom: 22px;
+}
+
+.about-v2-section-heading .about-v2-label {
+	margin-bottom: 12px;
+}
+
+.about-v2-section-heading h2 {
+	margin-bottom: 0;
+}
+
+.about-v2-vision-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: stretch;
+	gap: 20px;
+}
+
+.about-v2-vision-card {
+	min-height: 355px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 30px;
+	border-radius: 20px;
+	color: #ffffff;
+	background: linear-gradient(145deg, #12b3df, #0088b9);
+	box-shadow: 0 6px 15px rgba(0, 139, 190, 0.1);
+}
+
+.about-v2-vision-icon {
+	width: 44px;
+	height: 44px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 16px;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.about-v2-vision-icon svg {
+	width: 23px;
+	height: 23px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.about-v2-vision-card h3 {
+	margin: 0 0 12px;
+	font-size: 24px;
+}
+
+.about-v2-vision-card p {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.96);
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+.about-v2-mission-card {
+	padding: 24px;
+	border: 1px solid #e1eaf2;
+	border-radius: 20px;
+	background: #ffffff;
+	box-shadow: 0 5px 14px rgba(9, 44, 75, 0.05);
+}
+
+.about-v2-mission-card ol {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 17px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.about-v2-mission-card li {
+	display: grid;
+	grid-template-columns: 34px minmax(0, 1fr);
+	align-items: start;
+	gap: 14px;
+}
+
+.about-v2-mission-card li span {
+	width: 32px;
+	height: 32px;
+	display: grid;
+	place-items: center;
+	border-radius: 9px;
+	color: #008fc7;
+	background: #eaf7fc;
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.about-v2-mission-card li p {
+	margin: 1px 0 0;
+	color: #344b60;
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+/* =========================================================
+   11. HALAMAN TENTANG KEMATIF - SEJARAH / TIMELINE
+   ========================================================= */
+
+.about-v2-history-section {
+	margin-top: 65px;
+}
+
+.about-v2-history-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	column-gap: 24px;
+	row-gap: 28px;
+}
+
+.about-v2-history-item {
+	min-width: 0;
+}
+
+.about-v2-history-line {
+	height: 14px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.about-v2-history-line span {
+	width: 11px;
+	height: 11px;
+	flex: 0 0 11px;
+	border-radius: 50%;
+	background: #08a6d8;
+}
+
+.about-v2-history-line::after {
+	content: "";
+	height: 1px;
+	flex: 1;
+	background: #d9e5ee;
+}
+
+.about-v2-history-item h3 {
+	margin: 9px 0 8px;
+	color: #0088bd;
+	font-size: 26px;
+	line-height: 1.1;
+	letter-spacing: -0.5px;
+}
+
+.about-v2-history-item p {
+	margin: 0;
+	color: #5b6d80;
+	font-size: 13px;
+	line-height: 1.7;
+}
+
+.about-v2-profile,
+.about-v2-vision-section,
+.about-v2-history-section {
+	scroll-margin-top: 105px;
+}
