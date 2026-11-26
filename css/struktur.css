@@ -1,0 +1,1495 @@
+/* =========================================================
+   12. HALAMAN STRUKTUR - HERO
+   ========================================================= */
+
+.structure-hero {
+	overflow: hidden;
+	background: linear-gradient(115deg, #ffffff 0%, #f4fbfe 45%, #e7f6fc 100%);
+}
+
+.structure-hero-inner.container,
+.structure-board-section > .container,
+.structure-division-section > .container {
+	width: min(92%, 1440px);
+	max-width: 1440px;
+}
+
+.structure-hero-inner {
+	min-height: 330px;
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	align-items: center;
+	gap: 55px;
+	padding-top: 34px;
+	padding-bottom: 38px;
+}
+
+.structure-hero-copy {
+	padding: 8px 0;
+}
+
+.structure-breadcrumb {
+	margin: 0 0 16px;
+	color: #68798b;
+	font-size: 13px;
+}
+
+.structure-breadcrumb a:hover {
+	color: #009bd2;
+}
+
+.structure-eyebrow,
+.structure-section-label {
+	display: block;
+	margin-bottom: 14px;
+	color: #009bd2;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.65px;
+	text-transform: uppercase;
+}
+
+.structure-eyebrow::before,
+.structure-section-label::before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 2px;
+	margin-right: 9px;
+	vertical-align: middle;
+	border-radius: 3px;
+	background: #00a5db;
+}
+
+.structure-hero-copy h1 {
+	margin: 0 0 14px;
+	color: #092c4b;
+	font-size: clamp(42px, 4.2vw, 58px);
+	font-weight: 800;
+	line-height: 1.08;
+	letter-spacing: -2px;
+}
+
+.structure-hero-copy > p:last-child {
+	margin: 0;
+	color: #566b7e;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+/* Area foto hero Struktur */
+.structure-hero-visual {
+	position: relative;
+	width: 100%;
+	max-width: 390px;
+	height: 260px;
+	justify-self: end;
+}
+
+.structure-hero-backdrop {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 82%;
+	height: 84%;
+	border-radius: 20px;
+	background: linear-gradient(140deg, #0ba9d8, #0086b8);
+}
+
+.structure-photo-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	color: #009bd2;
+	background: linear-gradient(145deg, #e8f6fc, #cceaf6);
+	text-align: center;
+}
+
+.structure-hero-photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 82%;
+	height: 84%;
+	border-radius: 20px;
+	box-shadow: 0 9px 20px rgba(8, 42, 70, 0.12);
+}
+
+.structure-photo-placeholder svg {
+	width: 28px;
+	height: 28px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.structure-photo-placeholder small {
+	margin-top: 9px;
+	font-size: 11px;
+}
+
+.structure-photo-placeholder img,
+.structure-person-photo img,
+.structure-member-photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 20%;
+}
+
+/* =========================================================
+   13. HALAMAN STRUKTUR - BAGAN PENGURUS HARIAN
+   Garis cabang memakai lebar grid, bukan posisi manual.
+   ========================================================= */
+
+.structure-board-section {
+	padding: 70px 0 88px;
+	background: #ffffff;
+}
+
+.structure-center-heading {
+	margin-bottom: 34px;
+	text-align: center;
+}
+
+.structure-center-heading .structure-section-label {
+	margin-bottom: 12px;
+}
+
+.structure-center-heading h2 {
+	margin: 0 0 9px;
+	color: #092c4b;
+	font-size: 34px;
+	letter-spacing: -0.8px;
+}
+
+.structure-center-heading p {
+	margin: 0;
+	color: #65788b;
+	font-size: 14px;
+}
+
+/* Kolom bagan: ketua, wakil, kemudian empat pengurus */
+/* =========================================================
+   13. HALAMAN STRUKTUR - BAGAN PENGURUS HARIAN
+   Layout tanpa garis penghubung.
+   ========================================================= */
+
+/* Mengatur keseluruhan area bagan */
+.structure-org-chart {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 32px;
+	width: 100%;
+}
+
+/* Mengatur Ketua dan Wakil Ketua dalam dua kolom */
+.structure-leadership {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 350px));
+	justify-content: center;
+	gap: 32px;
+	width: min(100%, 732px);
+
+	/* Memberikan jarak dari bagian atas bagan */
+	margin-top: 25px;
+}
+
+/* Style dasar seluruh kartu pengurus */
+.structure-person-card {
+	position: relative;
+	width: 100%;
+	min-width: 0;
+	overflow: hidden;
+	border: 1px solid #dce7ef;
+	border-radius: 20px;
+	background: #ffffff;
+	box-shadow: 0 5px 15px rgba(9, 44, 75, 0.08);
+}
+
+/* Ukuran kartu Ketua dan Wakil Ketua */
+.structure-person-main {
+	width: 100%;
+	max-width: 350px;
+}
+
+/* Area foto Ketua dan Wakil Ketua */
+.structure-person-photo {
+	height: 240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	color: #009bd2;
+	background: linear-gradient(145deg, #e8f6fc, #cceaf6);
+	text-align: center;
+}
+
+/* Ukuran ikon foto */
+.structure-person-photo svg {
+	width: 34px;
+	height: 34px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+/* Teks placeholder foto */
+.structure-person-photo small {
+	margin-top: 9px;
+	font-size: 14px;
+}
+
+/* Informasi nama dan jabatan */
+.structure-person-info {
+	min-height: 112px;
+	padding: 19px 22px 17px;
+}
+
+/* Nama pengurus */
+.structure-person-info h3 {
+	margin: 0 0 5px;
+	color: #092c4b;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 1.4;
+	overflow-wrap: anywhere;
+}
+
+/* Jabatan pengurus */
+.structure-person-info p {
+	margin: 0 0 7px;
+	color: #008fc7;
+	font-size: 16px;
+}
+
+/* Badge divisi BPH */
+.structure-person-info span {
+	display: inline-block;
+	padding: 6px 14px;
+	border-radius: 20px;
+	color: #008fc7;
+	background: #eaf7fc;
+	font-size: 13px;
+}
+
+/* Mengatur empat kartu Sekretaris dan Bendahara */
+.structure-board-members {
+	width: min(100%, 1280px);
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 24px;
+	padding-top: 0;
+}
+
+/* Mengatur area foto empat pengurus */
+.structure-board-members .structure-person-photo {
+	height: 325px;
+}
+
+/* Mengatur informasi empat pengurus */
+.structure-board-members .structure-person-info {
+	min-height: 125px;
+	padding: 20px 22px;
+}
+
+.structure-board-members .structure-person-info h3 {
+	font-size: 19px;
+}
+
+.structure-board-members .structure-person-info p {
+	font-size: 16px;
+}
+
+/* =========================================================
+   14. HALAMAN STRUKTUR - ANGGOTA DIVISI
+   ========================================================= */
+
+.structure-division-section {
+	padding: 72px 0 82px;
+	background: linear-gradient(115deg, #f4fbfe, #e8f6fc);
+}
+
+.structure-division-heading {
+	margin-bottom: 34px;
+}
+
+.structure-division-heading .structure-section-label {
+	margin-bottom: 12px;
+}
+
+.structure-division-heading h2 {
+	margin: 0 0 9px;
+	color: #092c4b;
+	font-size: 42px;
+	letter-spacing: -0.9px;
+}
+
+.structure-division-heading p {
+	margin: 0;
+	color: #65788b;
+	font-size: 18px;
+}
+
+/* Sidebar divisi dan area informasi */
+.structure-division-layout {
+	display: grid;
+	grid-template-columns: 300px minmax(0, 1fr);
+	align-items: start;
+	gap: 34px;
+}
+
+.structure-division-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 17px;
+	border: 1px solid #e0eaf2;
+	border-radius: 23px;
+	background: #ffffff;
+	box-shadow: 0 5px 15px rgba(9, 44, 75, 0.07);
+}
+
+.structure-division-tab {
+	width: 100%;
+	min-height: 62px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 9px 13px;
+	border: 0;
+	border-radius: 14px;
+	color: #173751;
+	background: transparent;
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: left;
+	cursor: pointer;
+	transition:
+		color 0.2s ease,
+		background 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.structure-division-tab:hover {
+	color: #008fc7;
+	background: #edf8fc;
+}
+
+.structure-division-tab.is-active {
+	color: #ffffff;
+	background: linear-gradient(110deg, #0baee0, #0087bb);
+	box-shadow: 0 5px 12px rgba(0, 140, 190, 0.2);
+}
+
+.structure-tab-icon {
+	width: 46px;
+	height: 46px;
+	flex: 0 0 46px;
+	display: grid;
+	place-items: center;
+	border-radius: 12px;
+	color: #ffffff;
+	background: linear-gradient(145deg, #10b2df, #0087bd);
+}
+
+.structure-division-tab.is-active .structure-tab-icon {
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.structure-tab-icon svg {
+	width: 26px;
+	height: 26px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+/* Kotak utama informasi divisi */
+.structure-division-content {
+	min-width: 0;
+	padding: 34px;
+	border: 1px solid #e1eaf2;
+	border-radius: 24px;
+	background: #ffffff;
+	box-shadow: 0 6px 16px rgba(9, 44, 75, 0.07);
+}
+
+.structure-division-title {
+	margin-bottom: 27px;
+}
+
+.structure-division-title h3,
+.structure-division-empty h3 {
+	margin: 0 0 7px;
+	color: #092c4b;
+	font-size: 32px;
+	letter-spacing: -0.5px;
+}
+
+.structure-division-title p,
+.structure-division-empty p {
+	margin: 0;
+	color: #607386;
+	font-size: 17px;
+	line-height: 1.65;
+}
+
+/* Kartu identitas ketua divisi */
+.structure-division-leader {
+	min-height: 220px;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin-bottom: 34px;
+	padding: 22px;
+	border: 1px solid #e1edf4;
+	border-radius: 22px;
+	background: linear-gradient(110deg, #f3faff, #eaf6fc);
+}
+
+.structure-member-photo {
+	width: 180px;
+	height: 180px;
+	flex: 0 0 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 18px;
+	color: #009bd2;
+	background: linear-gradient(145deg, #e8f6fc, #cceaf6);
+	text-align: center;
+}
+
+.structure-member-photo svg {
+	width: 34px;
+	height: 34px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.structure-member-photo small {
+	margin-top: 9px;
+	font-size: 15px;
+}
+
+.structure-division-leader > div:last-child > span {
+	display: block;
+	margin-bottom: 8px;
+	color: #009bd2;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.4px;
+}
+
+.structure-division-leader h4 {
+	margin: 0;
+	color: #092c4b;
+	font-size: 30px;
+	line-height: 1.35;
+}
+
+/* Grid daftar anggota divisi */
+.structure-list-heading {
+	margin: 0 0 17px;
+	color: #092c4b;
+	font-size: 19px;
+	font-weight: 700;
+}
+
+.structure-member-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.structure-member-item,
+.structure-other-leader {
+	min-width: 0;
+	min-height: 86px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 12px 15px;
+	border: 1px solid #e0eaf2;
+	border-radius: 18px;
+	background: #ffffff;
+}
+
+.structure-member-avatar {
+	width: 62px;
+	height: 62px;
+	flex: 0 0 62px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	color: #009bd2;
+	background: #e6f5fb;
+}
+
+.structure-member-avatar svg {
+	width: 33px;
+	height: 33px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.structure-member-item > span:last-child,
+.structure-other-leader > span:last-child {
+	min-width: 0;
+}
+
+/* Foto ketua divisi */
+#photo-leader-division {
+	overflow: hidden;
+}
+
+#photo-leader-division img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+/* Foto anggota divisi */
+.structure-member-avatar {
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.structure-member-avatar img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.structure-member-item strong,
+.structure-other-leader strong {
+	display: block;
+	color: #092c4b;
+	font-size: 16px;
+	line-height: 1.4;
+	overflow-wrap: anywhere;
+}
+
+.structure-member-item small,
+.structure-other-leader small {
+	display: block;
+	margin-top: 3px;
+	color: #009bd2;
+	font-size: 13px;
+}
+
+/* Daftar ketua divisi lainnya */
+.structure-other-leader-heading {
+	margin-top: 34px;
+}
+
+.structure-other-leaders {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.structure-other-leader {
+	min-height: 75px;
+	padding: 10px;
+	gap: 10px;
+}
+
+.structure-other-leader .structure-member-avatar {
+	width: 48px;
+	height: 48px;
+	flex-basis: 48px;
+}
+
+.structure-other-leader .structure-member-avatar svg {
+	width: 26px;
+	height: 26px;
+}
+
+/* Pesan saat data suatu divisi belum tersedia */
+.structure-division-empty {
+	min-height: 260px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 30px;
+	border: 1px dashed #cbdfea;
+	border-radius: 18px;
+	background: #f7fcfe;
+}
+
+.structure-division-empty[hidden] {
+	display: none;
+}
+
+.structure-board-section,
+.structure-division-section {
+	scroll-margin-top: 100px;
+}
+
+/* =========================================================
+   15. RESPONSIVE - TABLET DAN LAPTOP KECIL
+   ========================================================= */
+
+@media (max-width: 1100px) {
+	.navbar {
+		gap: 12px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.brand {
+		width: 88px;
+	}
+
+	.nav-links a {
+		padding-right: 10px;
+		padding-left: 10px;
+		font-size: 11px;
+	}
+
+	.hero-inner {
+		min-height: 380px;
+		gap: 25px;
+	}
+
+	.hero-gallery {
+		height: 290px;
+	}
+
+	.about-v2-main {
+		grid-template-columns: 190px minmax(0, 1fr);
+		gap: 30px;
+	}
+
+	.about-v2-vision-card {
+		min-height: 330px;
+	}
+
+	.structure-division-layout {
+		grid-template-columns: 250px minmax(0, 1fr);
+		gap: 25px;
+	}
+
+	.structure-division-menu {
+		padding: 13px;
+	}
+
+	.structure-division-tab {
+		min-height: 56px;
+		font-size: 14px;
+	}
+
+	.structure-tab-icon {
+		width: 40px;
+		height: 40px;
+		flex-basis: 40px;
+	}
+
+	.structure-division-content {
+		padding: 25px;
+	}
+
+	.structure-member-photo {
+		width: 150px;
+		height: 150px;
+		flex-basis: 150px;
+	}
+
+	.structure-division-leader h4 {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 900px) {
+	.container {
+		width: 90%;
+	}
+
+	.navbar.container {
+		width: 94%;
+	}
+
+	.navbar {
+		min-height: 62px;
+	}
+
+	.nav-links {
+		gap: 1px;
+	}
+
+	.nav-links a {
+		min-height: 36px;
+		padding: 8px 7px;
+		font-size: 10px;
+	}
+
+	.hero-inner {
+		min-height: 350px;
+	}
+
+	.hero h1 {
+		font-size: 38px;
+	}
+
+	.hero-gallery {
+		height: 260px;
+	}
+
+	.about-inner {
+		gap: 35px;
+	}
+
+	.leader-card {
+		grid-template-columns: 190px minmax(0, 1fr);
+		gap: 20px;
+	}
+
+	.leader-photo {
+		height: 210px;
+	}
+
+	.leader-roles {
+		grid-template-columns: 1fr;
+	}
+
+	.division-grid {
+		gap: 9px;
+	}
+
+	.division-card {
+		padding: 13px;
+	}
+
+	/* Struktur: bagan menjadi dua kolom agar kartu tidak terlalu sempit.
+     Pada ukuran ini garis cabang dinonaktifkan agar tidak menyilang. */
+	/* Responsive bagan pengurus untuk tablet */
+	.structure-leadership {
+		width: min(100%, 650px);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 22px;
+	}
+
+	.structure-person-main {
+		width: 100%;
+	}
+
+	.structure-board-members {
+		width: min(100%, 650px);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 22px;
+		padding-top: 0;
+	}
+
+	.structure-board-members .structure-person-photo {
+		height: 230px;
+	}
+
+	.structure-board-members .structure-person-info {
+		min-height: 110px;
+	}
+
+	.structure-division-layout {
+		grid-template-columns: 210px minmax(0, 1fr);
+		gap: 18px;
+	}
+
+	.structure-division-tab {
+		min-height: 48px;
+		padding: 7px 9px;
+		font-size: 12px;
+	}
+
+	.structure-tab-icon {
+		width: 34px;
+		height: 34px;
+		flex-basis: 34px;
+	}
+
+	.structure-tab-icon svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.structure-division-title h3 {
+		font-size: 27px;
+	}
+
+	.structure-division-title p {
+		font-size: 14px;
+	}
+
+	.structure-division-leader {
+		gap: 17px;
+	}
+
+	.structure-member-photo {
+		width: 115px;
+		height: 130px;
+		flex-basis: 115px;
+	}
+
+	.structure-division-leader h4 {
+		font-size: 21px;
+	}
+
+	.structure-member-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.structure-other-leaders {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* =========================================================
+   16. RESPONSIVE - TABLET POTRET DAN MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+	html {
+		scroll-padding-top: 125px;
+	}
+
+	.navbar-wrap {
+		padding-top: 9px;
+		padding-bottom: 9px;
+	}
+
+	.navbar {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 8px;
+		padding: 9px 12px;
+		border-radius: 18px;
+	}
+
+	.brand {
+		width: 82px;
+	}
+
+	.nav-links {
+		order: 3;
+		width: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.nav-links a {
+		min-height: 32px;
+		padding: 7px 9px;
+		font-size: 10px;
+	}
+
+	.hero-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 25px;
+		padding-top: 38px;
+		padding-bottom: 30px;
+	}
+
+	.hero h1 {
+		font-size: 34px;
+	}
+
+	.hero-copy p {
+		font-size: 13px;
+	}
+
+	.hero-gallery {
+		height: 270px;
+	}
+
+	.alumni-tag {
+		bottom: 10px;
+		left: 8px;
+	}
+
+	.stats {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 15px;
+		padding: 16px 10px;
+	}
+
+	.stat {
+		padding: 0 12px;
+	}
+
+	.stat:nth-child(2) {
+		border-right: 0;
+	}
+
+	.stat:nth-child(3) {
+		padding-left: 12px;
+	}
+
+	.section {
+		padding-top: 52px;
+		padding-bottom: 52px;
+	}
+
+	.section-heading h2 {
+		font-size: 24px;
+	}
+
+	.values-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.value-feature {
+		min-height: 230px;
+	}
+
+	.about {
+		padding: 52px 0;
+	}
+
+	.about-inner {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.about-visual {
+		height: 245px;
+	}
+
+	.about-copy h2 {
+		font-size: 25px;
+	}
+
+	.section-heading-row {
+		align-items: flex-start;
+	}
+
+	.leader-card {
+		grid-template-columns: 1fr;
+	}
+
+	.leader-photo {
+		height: 240px;
+	}
+
+	.leader-roles {
+		grid-template-columns: 1fr;
+	}
+
+	.division-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.division-card {
+		min-height: 125px;
+	}
+
+	.join-card {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 27px 22px;
+	}
+
+	.join-card h2 {
+		font-size: 20px;
+	}
+
+	.footer-inner {
+		grid-template-columns: 1fr 1fr;
+		gap: 28px;
+	}
+
+	.footer-brand {
+		grid-column: 1 / -1;
+	}
+
+	.footer-bottom {
+		font-size: 8px;
+	}
+
+	/* Halaman Tentang */
+	.about-v2-hero-inner.container,
+	.about-v2-main.container {
+		width: 90%;
+	}
+
+	.about-v2-hero-inner {
+		min-height: auto;
+		grid-template-columns: 1fr;
+		gap: 25px;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.about-v2-hero-copy h1 {
+		font-size: 36px;
+	}
+
+	.about-v2-hero-description {
+		font-size: 14px;
+	}
+
+	.about-v2-hero-visual {
+		width: min(100%, 340px);
+		height: 220px;
+		justify-self: center;
+	}
+
+	.about-v2-main {
+		grid-template-columns: 1fr;
+		gap: 25px;
+		padding-top: 34px;
+		padding-bottom: 45px;
+	}
+
+	.about-v2-sidebar {
+		position: static;
+	}
+
+	.about-v2-toc {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 5px;
+		padding: 10px;
+	}
+
+	.about-v2-toc > p {
+		grid-column: 1 / -1;
+	}
+
+	.about-v2-toc a {
+		justify-content: center;
+		gap: 6px;
+		padding: 9px 5px;
+		font-size: 11px;
+	}
+
+	.about-v2-profile h2,
+	.about-v2-section-heading h2 {
+		font-size: 25px;
+	}
+
+	.about-v2-profile > p {
+		font-size: 14px;
+	}
+
+	.about-v2-quote {
+		min-height: 78px;
+		gap: 10px;
+		padding: 15px;
+	}
+
+	.about-v2-quote strong {
+		font-size: 14px;
+	}
+
+	.about-v2-vision-section,
+	.about-v2-history-section {
+		margin-top: 40px;
+	}
+
+	.about-v2-vision-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.about-v2-vision-card {
+		min-height: 245px;
+		padding: 23px;
+	}
+
+	.about-v2-vision-card p,
+	.about-v2-mission-card li p {
+		font-size: 13px;
+	}
+
+	.about-v2-mission-card ol {
+		gap: 16px;
+	}
+
+	.about-v2-history-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 16px;
+		row-gap: 22px;
+	}
+
+	.about-v2-history-item h3 {
+		font-size: 21px;
+	}
+
+	.about-v2-history-item p {
+		font-size: 12px;
+	}
+
+	/* Halaman Struktur */
+	.structure-hero-inner.container,
+	.structure-board-section > .container,
+	.structure-division-section > .container {
+		width: 90%;
+	}
+
+	.structure-hero-inner {
+		min-height: auto;
+		grid-template-columns: 1fr;
+		gap: 24px;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.structure-hero-copy h1 {
+		font-size: 36px;
+	}
+
+	.structure-hero-copy > p:last-child {
+		font-size: 14px;
+	}
+
+	.structure-hero-visual {
+		width: min(100%, 340px);
+		height: 220px;
+		justify-self: center;
+	}
+
+	.structure-board-section {
+		padding: 45px 0 55px;
+	}
+
+	.structure-center-heading h2 {
+		font-size: 26px;
+	}
+
+	.structure-center-heading p {
+		font-size: 12px;
+	}
+
+	.structure-person-main {
+		width: min(100%, 300px);
+	}
+	/* Responsive bagan pengurus untuk tablet */
+	.structure-leadership {
+		width: min(100%, 650px);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 22px;
+	}
+
+	.structure-person-main {
+		width: 100%;
+	}
+
+	.structure-board-members {
+		width: min(100%, 650px);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 22px;
+		padding-top: 0;
+	}
+
+	.structure-board-members .structure-person-photo {
+		height: 230px;
+	}
+
+	.structure-board-members .structure-person-info {
+		min-height: 110px;
+	}
+
+	.structure-person-main .structure-person-photo {
+		height: 220px;
+	}
+
+	.structure-person-main .structure-person-info {
+		min-height: 100px;
+		padding: 15px 17px;
+	}
+
+	.structure-person-main .structure-person-info h3 {
+		font-size: 17px;
+	}
+
+	.structure-person-main .structure-person-info p {
+		font-size: 14px;
+	}
+
+	.structure-board-members {
+		width: 100%;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 15px;
+	}
+
+	.structure-board-members .structure-person-photo {
+		height: clamp(160px, 40vw, 230px);
+	}
+
+	.structure-board-members .structure-person-info {
+		min-height: 100px;
+		padding: 13px;
+	}
+
+	.structure-board-members .structure-person-info h3 {
+		font-size: 14px;
+	}
+
+	.structure-board-members .structure-person-info p {
+		font-size: 12px;
+	}
+
+	.structure-board-members .structure-person-info span {
+		font-size: 11px;
+	}
+
+	.structure-division-section {
+		padding: 48px 0 55px;
+	}
+
+	.structure-division-heading h2 {
+		font-size: 30px;
+	}
+
+	.structure-division-heading p {
+		font-size: 14px;
+	}
+
+	.structure-division-layout {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.structure-division-menu {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.structure-division-content {
+		padding: 20px;
+	}
+
+	.structure-division-title h3 {
+		font-size: 25px;
+	}
+
+	.structure-division-title p {
+		font-size: 13px;
+	}
+
+	.structure-division-leader {
+		min-height: 125px;
+		gap: 14px;
+		padding: 13px;
+	}
+
+	.structure-member-photo {
+		width: 105px;
+		height: 105px;
+		flex-basis: 105px;
+	}
+
+	.structure-division-leader h4 {
+		font-size: 18px;
+	}
+
+	.structure-division-leader > div:last-child > span {
+		font-size: 10px;
+	}
+
+	.structure-member-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.structure-member-item strong,
+	.structure-other-leader strong {
+		font-size: 14px;
+	}
+
+	.structure-member-item small,
+	.structure-other-leader small {
+		font-size: 11px;
+	}
+
+	.structure-other-leaders {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* =========================================================
+   17. RESPONSIVE - HP SANGAT KECIL
+   ========================================================= */
+
+@media (max-width: 420px) {
+	.container {
+		width: 92%;
+	}
+
+	.nav-links a {
+		padding: 6px 7px;
+		font-size: 9px;
+	}
+
+	.hero h1 {
+		font-size: 31px;
+	}
+
+	.stats {
+		padding-right: 6px;
+		padding-left: 6px;
+	}
+
+	.stat strong {
+		font-size: 16px;
+	}
+
+	.footer-inner {
+		grid-template-columns: 1fr;
+	}
+
+	.footer-brand {
+		grid-column: auto;
+	}
+
+	.about-v2-history-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.structure-board-members {
+		width: min(100%, 320px);
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.structure-board-members .structure-person-photo {
+		height: 230px;
+	}
+
+	.structure-board-members .structure-person-info {
+		min-height: 95px;
+	}
+
+	.structure-division-menu {
+		grid-template-columns: 1fr 1fr;
+		padding: 10px;
+	}
+
+	.structure-division-tab {
+		min-height: 46px;
+		gap: 7px;
+		padding: 6px;
+		font-size: 11px;
+	}
+
+	.structure-tab-icon {
+		width: 31px;
+		height: 31px;
+		flex-basis: 31px;
+	}
+
+	.structure-division-content {
+		padding: 15px;
+	}
+
+	.structure-division-leader {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.structure-member-photo {
+		width: 100%;
+		height: 175px;
+		flex-basis: auto;
+	}
+}
+
+/* =========================================================
+   18. PENYERAGAMAN LAYOUT ANTAR HALAMAN
+   Bagian ini menyamakan lebar konten Program Kerja dan
+   Keanggotaan dengan halaman Tentang dan Struktur.
+   Ukuran elemen, warna, dan komposisi visual Figma tetap.
+   ========================================================= */
+
+/* Desktop: semua halaman informasi memakai lebar konten yang sama */
+@media (min-width: 1201px) {
+	.about-v2-hero-inner.container,
+	.about-v2-main.container,
+	.structure-hero-inner.container,
+	.structure-board-section > .container,
+	.structure-division-section > .container,
+	.work-hero-inner.container,
+	.work-main.container,
+	.membership-hero-inner.container,
+	.membership-main.container,
+	.membership-timeline-section.container {
+		width: min(92%, 1440px);
+		max-width: 1440px;
+	}
+}
+
+/* Tablet dan laptop kecil: gunakan lebar 90% seperti Tentang/Struktur */
+@media (min-width: 701px) and (max-width: 1200px) {
+	.about-v2-hero-inner.container,
+	.about-v2-main.container,
+	.structure-hero-inner.container,
+	.structure-board-section > .container,
+	.structure-division-section > .container,
+	.work-hero-inner.container,
+	.work-main.container,
+	.membership-hero-inner.container,
+	.membership-main.container,
+	.membership-timeline-section.container {
+		width: 90%;
+		max-width: none;
+	}
+}
+
+/* Mobile: semua konten memakai lebar yang sama */
+@media (max-width: 700px) {
+	.about-v2-hero-inner.container,
+	.about-v2-main.container,
+	.structure-hero-inner.container,
+	.structure-board-section > .container,
+	.structure-division-section > .container,
+	.work-hero-inner.container,
+	.work-main.container,
+	.membership-hero-inner.container,
+	.membership-main.container,
+	.membership-timeline-section.container {
+		width: 90%;
+		max-width: none;
+	}
+}
+
+/* HP kecil: beri sedikit ruang tambahan di sisi layar */
+@media (max-width: 420px) {
+	.about-v2-hero-inner.container,
+	.about-v2-main.container,
+	.structure-hero-inner.container,
+	.structure-board-section > .container,
+	.structure-division-section > .container,
+	.work-hero-inner.container,
+	.work-main.container,
+	.membership-hero-inner.container,
+	.membership-main.container,
+	.membership-timeline-section.container {
+		width: 92%;
+	}
+}
