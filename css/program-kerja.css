@@ -1,0 +1,697 @@
+/* =========================================================
+   HALAMAN PROGRAM KERJA
+   ========================================================= */
+
+/* =========================================================
+   HALAMAN PROGRAM KERJA KEMATIF
+   Tempelkan seluruh CSS ini di bagian paling bawah style.css.
+   Class diawali work- agar tidak mengganggu halaman lain.
+   ========================================================= */
+
+/* =========================================================
+   1. HERO PROGRAM KERJA
+   ========================================================= */
+
+.work-hero {
+	background: linear-gradient(112deg, #f8fcfe 0%, #e7f6fc 100%);
+}
+
+.work-hero-inner.container {
+	width: min(88%, 1180px);
+	max-width: 1180px;
+}
+
+.work-hero-inner {
+	min-height: 328px;
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+	align-items: center;
+	gap: 55px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.work-hero-copy {
+	min-width: 0;
+}
+
+.work-breadcrumb {
+	margin: 0 0 14px;
+	color: #718096;
+	font-size: 12px;
+}
+
+.work-breadcrumb a:hover {
+	color: #009dd3;
+}
+
+.work-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	margin-bottom: 12px;
+	color: #009bd1;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+}
+
+.work-eyebrow::before {
+	content: "";
+	width: 17px;
+	height: 2px;
+	background: #00a5dc;
+}
+
+.work-hero-copy h1 {
+	margin: 0 0 10px;
+	color: #0b2d49;
+	font-size: clamp(38px, 4vw, 48px);
+	line-height: 1.12;
+	letter-spacing: -0.04em;
+}
+
+.work-hero-copy > p:last-child {
+	max-width: 540px;
+	margin: 0;
+	color: #53657a;
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+/* Foto utama dan bidang biru di belakangnya */
+.work-hero-visual {
+	position: relative;
+	width: 100%;
+	max-width: 345px;
+	height: 235px;
+	justify-self: end;
+}
+
+.work-hero-backdrop {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 88%;
+	height: 84%;
+	border-radius: 0 20px 20px 20px;
+	background: linear-gradient(135deg, #0ba9d8, #0085b6);
+}
+
+.work-photo-placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 88%;
+	height: 84%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border-radius: 20px;
+	background: linear-gradient(135deg, #e4f5fb, #cceaf6);
+	box-shadow: 0 12px 25px rgba(9, 44, 75, 0.12);
+	color: #009bd1;
+}
+
+.work-photo-placeholder svg {
+	width: 28px;
+	height: 28px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.work-photo-placeholder small {
+	font-size: 10px;
+}
+
+.work-photo-placeholder small {
+	font-size: 10px;
+}
+
+.work-photo-placeholder img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5%;
+	object-fit: cover;
+}
+
+/* =========================================================
+   2. LAYOUT UTAMA: SIDEBAR DAN KONTEN PROGRAM
+   ========================================================= */
+
+.work-main.container {
+	width: min(90%, 1240px); /* Sedikit diperlebar agar konten kanan tetap lega */
+	max-width: 1180px;
+}
+
+.work-main {
+	display: grid;
+	grid-template-columns: 290px minmax(0, 1fr);
+	align-items: start;
+	gap: 30px;
+	padding-top: 58px;
+	padding-bottom: 58px;
+}
+
+/* Sidebar pilih divisi */
+.work-sidebar {
+	position: sticky;
+	top: 105px;
+	padding: 18px 16px; /* Ruang dalam diperbesar */
+	border: 1px solid #dce8f1;
+	border-radius: 19px;
+	background: #ffffff;
+	box-shadow: 0 5px 15px rgba(9, 44, 75, 0.07);
+}
+
+.work-sidebar-heading {
+	margin: 0 0 8px;
+	padding: 0 1px;
+	color: #7b8998;
+	font-size: 12px; /* Diperbesar dari 10px */
+	font-weight: 600;
+	letter-spacing: 0.055em;
+	text-transform: uppercase;
+}
+
+.work-division-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px; /* Jarak antar tombol diperbesar dari 5px */
+}
+
+.work-division-tab {
+	width: 100%;
+	min-height: 68px; /* Tinggi tombol diperbesar dari 55px */
+	display: flex;
+	align-items: center;
+	gap: 14px; /* Jarak ikon ke teks diperbesar dari 10px */
+	padding: 8px 10px;
+	border: 0;
+	border-radius: 13px;
+	background: transparent;
+	color: #0b2d49;
+	font-family: inherit;
+	text-align: left;
+	cursor: pointer;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease,
+		box-shadow 0.2s ease,
+		transform 0.2s ease;
+}
+
+.work-division-tab:hover {
+	background: #eff9fd;
+}
+
+.work-division-tab:focus-visible {
+	outline: 3px solid rgba(0, 158, 211, 0.28);
+	outline-offset: 2px;
+}
+
+.work-division-tab.is-active {
+	color: #ffffff;
+	background: linear-gradient(115deg, #10afe0, #0089bd);
+	box-shadow: 0 6px 12px rgba(0, 143, 195, 0.2);
+}
+
+.work-tab-icon {
+	width: 44px; /* Kotak ikon diperbesar dari 34px */
+	height: 34px;
+	flex: 0 0 34px;
+	display: grid;
+	place-items: center;
+	border-radius: 9px;
+	background: linear-gradient(135deg, #12b4e4, #0089bd);
+	color: #ffffff;
+}
+
+.work-tab-icon svg {
+	width: 24px; /* Ukuran ikon diperbesar dari 21px */
+	height: 21px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.work-division-tab.is-active .work-tab-icon {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.work-tab-text {
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+}
+
+.work-tab-text strong {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.work-tab-text small {
+	color: #8593a2;
+	font-size: 12px; /* Jumlah program diperbesar dari 10px */
+	line-height: 1.3;
+}
+
+.work-division-tab.is-active .work-tab-text small {
+	color: rgba(255, 255, 255, 0.88);
+}
+
+/* =========================================================
+   3. KARTU RINGKASAN DIVISI
+   ========================================================= */
+
+.work-content {
+	min-width: 0;
+}
+
+.work-division-panel[hidden] {
+	display: none;
+}
+
+.work-summary-card {
+	position: relative;
+	isolation: isolate;
+	min-height: 200px; /* Diperbesar dari 160px */
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 28px;
+	overflow: hidden;
+	padding: 32px 34px; /* Ruang dalam diperbesar dari 25px 27px */
+	border-radius: 24px;
+	background: linear-gradient(112deg, #09263b, #10476e);
+	box-shadow: 0 10px 18px rgba(9, 44, 75, 0.13);
+	color: #ffffff;
+}
+
+/* Lingkaran dekoratif pada kartu ringkasan */
+.work-summary-card::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: -115px;
+	right: -15px;
+	width: 280px; /* Diperbesar dari 235px */
+	height: 280px;
+	border-radius: 50%;
+	background: rgba(0, 166, 218, 0.18);
+}
+
+.work-summary-copy {
+	min-width: 0;
+	max-width: 620px;
+}
+
+.work-summary-label {
+	display: block;
+	margin-bottom: 9px;
+	color: #00b7ed;
+	font-size: 12px; /* Diperbesar dari 10px */
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.work-summary-copy h2 {
+	margin: 0 0 10px;
+	color: #ffffff;
+	font-size: 29px; /* Diperbesar dari 23px */
+	line-height: 1.25;
+}
+
+.work-summary-copy p {
+	margin: 0;
+	color: #d5e4ef;
+	font-size: 14px; /* Diperbesar dari 11px */
+	line-height: 1.65;
+}
+
+.work-summary-stats {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: repeat(
+		1,
+		minmax(84px, 1fr)
+	); /* Diperbesar dari 65px */
+	gap: 12px;
+}
+
+.work-summary-stats > div {
+	min-width: 84px; /* Diperbesar dari 66px */
+	min-height: 82px; /* Diperbesar dari 65px */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	padding: 12px 10px;
+	border-radius: 15px;
+	background: rgba(255, 255, 255, 0.12);
+	text-align: center;
+}
+
+.work-summary-stats strong {
+	color: #ffffff;
+	font-size: 26px; /* Diperbesar dari 20px */
+	line-height: 1.1;
+}
+
+.work-summary-stats span {
+	color: #e0edf5;
+	font-size: 12px; /* Diperbesar dari 9px */
+}
+
+/* =========================================================
+   4. KARTU DAFTAR PROGRAM
+   Ketinggian kartu mengikuti isi teks, tidak dipaksa fixed.
+   ========================================================= */
+
+.work-program-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px; /* Jarak antar kartu diperbesar dari 12px */
+	margin-top: 22px;
+}
+
+.work-program-card {
+	min-width: 0;
+	min-height: 94px; /* Diperbesar dari 76px */
+	display: grid;
+	grid-template-columns: 44px minmax(0, 1fr) auto; /* Kolom nomor disesuaikan ke 44px */
+	align-items: start;
+	gap: 16px;
+	padding: 18px 22px; /* Ruang dalam diperbesar dari 14px 16px */
+	border: 1px solid #dce7f0;
+	border-radius: 18px;
+	background: #ffffff;
+	box-shadow: 0 2px 3px rgba(9, 44, 75, 0.04);
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		transform 0.2s ease;
+}
+
+.work-program-card:hover {
+	transform: translateY(-2px);
+	border-color: #b9dfee;
+	box-shadow: 0 7px 17px rgba(9, 44, 75, 0.07);
+}
+
+.work-program-number {
+	width: 44px; /* Diperbesar dari 34px (sama dengan kotak ikon sidebar) */
+	height: 44px;
+	display: grid;
+	place-items: center;
+	border-radius: 12px;
+	background: #e9f7fc;
+	color: #008fc7;
+	font-size: 15px; /* Diperbesar dari 12px */
+	font-weight: 700;
+}
+
+.work-program-copy {
+	min-width: 0;
+}
+
+.work-program-copy h3 {
+	margin: 2px 0 6px;
+	color: #092c4b;
+	font-size: 16px; /* Diperbesar dari 12px */
+	font-weight: 700;
+	line-height: 1.45;
+	overflow-wrap: anywhere;
+}
+
+.work-program-copy p {
+	margin: 0;
+	color: #647286;
+	font-size: 14px; /* Diperbesar dari 11px */
+	line-height: 1.6;
+	overflow-wrap: anywhere;
+}
+
+/* Label status selalu berada di kanan atas dan tidak menimpa teks */
+.work-status {
+	align-self: start;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	margin-top: 2px;
+	padding: 6px 12px; /* Diperbesar dari 4px 9px */
+	border: 1px solid transparent;
+	border-radius: 999px;
+	font-size: 12px; /* Diperbesar dari 9px */
+	font-weight: 600;
+	line-height: 1.2;
+	white-space: nowrap;
+}
+
+.work-status::before {
+	content: "";
+	width: 6px; /* Diperbesar dari 5px */
+	height: 6px;
+	flex: 0 0 6px;
+	border-radius: 50%;
+	background: currentColor;
+}
+
+.work-status.is-completed {
+	color: #008fc5;
+	background: #eaf7fc;
+}
+
+.work-status.is-ongoing {
+	border-color: #009bd1;
+	color: #008fc5;
+	background: #ffffff;
+}
+
+/* =========================================================
+   5. RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+	.work-hero-inner.container,
+	.work-main.container {
+		width: 90%;
+	}
+
+	.work-hero-inner {
+		grid-template-columns: minmax(0, 1fr) minmax(250px, 0.8fr);
+		gap: 30px;
+	}
+
+	.work-main {
+		grid-template-columns: 190px minmax(0, 1fr);
+		gap: 22px;
+	}
+
+	.work-summary-card {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.work-summary-stats {
+		justify-content: start;
+	}
+}
+
+/* =========================================================
+   6. RESPONSIVE - TABLET POTRET DAN HP
+   ========================================================= */
+
+@media (max-width: 700px) {
+	.work-hero-inner.container,
+	.work-main.container {
+		width: 90%;
+	}
+
+	.work-hero-inner {
+		min-height: auto;
+		grid-template-columns: 1fr;
+		gap: 25px;
+		padding-top: 32px;
+		padding-bottom: 35px;
+	}
+
+	.work-hero-copy h1 {
+		font-size: 36px;
+	}
+
+	.work-hero-copy > p:last-child {
+		font-size: 13px;
+	}
+
+	.work-hero-visual {
+		width: min(100%, 340px);
+		height: 220px;
+		justify-self: center;
+	}
+
+	.work-main {
+		grid-template-columns: 1fr;
+		gap: 22px;
+		padding-top: 35px;
+		padding-bottom: 45px;
+	}
+
+	.work-sidebar {
+		position: static;
+		padding: 11px;
+	}
+
+	.work-division-list {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 7px;
+	}
+
+	.work-division-tab {
+		min-height: 54px;
+		padding: 7px;
+		gap: 8px;
+	}
+
+	.work-tab-icon {
+		width: 32px;
+		height: 32px;
+		flex-basis: 32px;
+	}
+
+	.work-tab-icon svg {
+		width: 19px;
+		height: 19px;
+	}
+
+	.work-tab-text strong {
+		font-size: 11px;
+	}
+
+	.work-tab-text small {
+		font-size: 9px;
+	}
+
+	.work-summary-card {
+		min-height: 0;
+		grid-template-columns: 1fr;
+		gap: 17px;
+		padding: 22px;
+	}
+
+	.work-summary-copy h2 {
+		font-size: 21px;
+	}
+
+	.work-summary-copy p {
+		font-size: 12px;
+	}
+
+	.work-summary-stats {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.work-summary-stats > div {
+		min-width: 0;
+		min-height: 59px;
+	}
+
+	.work-program-card {
+		grid-template-columns: 32px minmax(0, 1fr);
+		gap: 10px;
+		padding: 13px;
+	}
+
+	.work-program-number {
+		width: 32px;
+		height: 32px;
+	}
+
+	.work-program-copy h3 {
+		font-size: 12px;
+	}
+
+	.work-program-copy p {
+		font-size: 11px;
+	}
+
+	.work-status {
+		grid-column: 2;
+		justify-self: start;
+		margin-top: 4px;
+	}
+}
+
+/* =========================================================
+   7. RESPONSIVE - HP KECIL
+   ========================================================= */
+
+@media (max-width: 420px) {
+	.work-hero-copy h1 {
+		font-size: 31px;
+	}
+
+	.work-division-list {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.work-division-tab {
+		gap: 6px;
+		padding: 6px;
+	}
+
+	.work-tab-icon {
+		width: 29px;
+		height: 29px;
+		flex-basis: 29px;
+	}
+
+	.work-tab-text strong {
+		font-size: 10px;
+	}
+
+	.work-summary-card {
+		padding: 18px;
+	}
+
+	.work-summary-stats {
+		gap: 5px;
+	}
+
+	.work-summary-stats > div {
+		padding: 7px 4px;
+	}
+
+	.work-summary-stats strong {
+		font-size: 18px;
+	}
+
+	.work-summary-stats span {
+		font-size: 8px;
+	}
+}
+
+/* Tombol Gabung mengikuti bentuk kapsul pada navbar Figma */
+.work-nav-button {
+	flex: 0 0 auto;
+	border-radius: 999px;
+	padding: 12px 20px;
+	white-space: nowrap;
+}
