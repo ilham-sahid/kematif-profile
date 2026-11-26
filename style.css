@@ -953,4 +953,129 @@ img {
 	.membership-hero-copy h1 {
 		font-weight: 800;
 	}
+
+	.hero-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 25px;
+		padding-top: 38px;
+		padding-bottom: 30px;
+	}
+
+	.hero h1 {
+		font-size: 34px;
+	}
+
+	.hero-copy p {
+		font-size: 13px;
+	}
+
+	.hero-gallery {
+		height: 270px;
+	}
+
+	.alumni-tag {
+		bottom: 10px;
+		left: 8px;
+	}
+
+	.stats {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 15px;
+		padding: 16px 10px;
+	}
+
+	.stat {
+		padding: 0 12px;
+	}
+
+	.stat:nth-child(2) {
+		border-right: 0;
+	}
+
+	.stat:nth-child(3) {
+		padding-left: 12px;
+	}
+
+	.section {
+		padding-top: 52px;
+		padding-bottom: 52px;
+	}
+
+	.section-heading h2 {
+		font-size: 24px;
+	}
+
+	.values-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.value-feature {
+		min-height: 230px;
+	}
+
+	.about {
+		padding: 52px 0;
+	}
+
+	.about-inner {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.about-visual {
+		height: 245px;
+	}
+
+	.about-copy h2 {
+		font-size: 25px;
+	}
+
+	.section-heading-row {
+		align-items: flex-start;
+	}
+
+	.leader-card {
+		grid-template-columns: 1fr;
+	}
+
+	.leader-photo {
+		height: 240px;
+	}
+
+	.leader-roles {
+		grid-template-columns: 1fr;
+	}
+
+	.division-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.division-card {
+		min-height: 125px;
+	}
+
+	.join-card {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 27px 22px;
+	}
+
+	.join-card h2 {
+		font-size: 20px;
+	}
+
+	.footer-inner {
+		grid-template-columns: 1fr 1fr;
+		gap: 28px;
+	}
+
+	.footer-brand {
+		grid-column: 1 / -1;
+	}
+
+	.footer-bottom {
+		font-size: 8px;
+	}
 }

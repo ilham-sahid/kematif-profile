@@ -1,7 +1,8 @@
 const DATA_DIVISI = {
 	BPH: {
 		title: "bph",
-		deskripsi: "teast1",
+		deskripsi:
+			"Mengelola, mengoordinasikan, dan mengawasi seluruh kegiatan operasional serta administrasi organisasi agar berjalan sesuai dengan visi dan misi Himpunan Mahasiswa Teknik Informatika.",
 		ketua: "Muhammad Thoriq Firdaus",
 		fotoKetua: "ketuaBPH.jpg",
 		anggota: [
@@ -35,7 +36,8 @@ const DATA_DIVISI = {
 
 	HUMAS: {
 		title: "humas",
-		deskripsi: "teast2",
+		deskripsi:
+			"Membangun dan menjaga relasi yang harmonis antara himpunan, mahasiswa Teknik Informatika, birokrasi kampus, serta pihak eksternal guna memperluas jaringan kerja sama.",
 		ketua: "Farel Manalif Habibie",
 		fotoKetua: "ketuaHumas.jpg",
 		anggota: [
@@ -62,7 +64,8 @@ const DATA_DIVISI = {
 
 	KOMINFO: {
 		title: "kominfo",
-		deskripsi: "teast4",
+		deskripsi:
+			"Mengelola media informasi dan komunikasi organisasi serta mempublikasikan seluruh kegiatan himpunan secara kreatif dan informatif kepada mahasiswa Teknik Informatika maupun pihak eksternal.",
 		ketua: "Nuril Aisyahroni",
 		fotoKetua: "ketuaKominfo.jpg",
 		anggota: [
@@ -87,7 +90,8 @@ const DATA_DIVISI = {
 
 	KWU: {
 		title: "kewirausahaan",
-		deskripsi: "teast3",
+		deskripsi:
+			"Mengembangkan jiwa kewirausahaan mahasiswa Teknik Informatika serta mengelola unit usaha kreatif dan mandiri untuk mendukung pendanaan organisasi.",
 		ketua: "Ananta Widayani",
 		fotoKetua: "ketuaKWU.jpg",
 		anggota: [

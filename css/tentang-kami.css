@@ -425,3 +425,118 @@
 .about-v2-history-section {
 	scroll-margin-top: 105px;
 }
+
+@media (max-width: 700px) {
+	/* Halaman Tentang */
+	.about-v2-hero-inner.container,
+	.about-v2-main.container {
+		width: 90%;
+	}
+
+	.about-v2-hero-inner {
+		min-height: auto;
+		grid-template-columns: 1fr;
+		gap: 25px;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.about-v2-hero-copy h1 {
+		font-size: 36px;
+	}
+
+	.about-v2-hero-description {
+		font-size: 14px;
+	}
+
+	.about-v2-hero-visual {
+		width: min(100%, 340px);
+		height: 220px;
+		justify-self: center;
+	}
+
+	.about-v2-main {
+		grid-template-columns: 1fr;
+		gap: 25px;
+		padding-top: 34px;
+		padding-bottom: 45px;
+	}
+
+	.about-v2-sidebar {
+		position: static;
+	}
+
+	.about-v2-toc {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 5px;
+		padding: 10px;
+	}
+
+	.about-v2-toc > p {
+		grid-column: 1 / -1;
+	}
+
+	.about-v2-toc a {
+		justify-content: center;
+		gap: 6px;
+		padding: 9px 5px;
+		font-size: 11px;
+	}
+
+	.about-v2-profile h2,
+	.about-v2-section-heading h2 {
+		font-size: 25px;
+	}
+
+	.about-v2-profile > p {
+		font-size: 14px;
+	}
+
+	.about-v2-quote {
+		min-height: 78px;
+		gap: 10px;
+		padding: 15px;
+	}
+
+	.about-v2-quote strong {
+		font-size: 14px;
+	}
+
+	.about-v2-vision-section,
+	.about-v2-history-section {
+		margin-top: 40px;
+	}
+
+	.about-v2-vision-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.about-v2-vision-card {
+		min-height: 245px;
+		padding: 23px;
+	}
+
+	.about-v2-vision-card p,
+	.about-v2-mission-card li p {
+		font-size: 13px;
+	}
+
+	.about-v2-mission-card ol {
+		gap: 16px;
+	}
+
+	.about-v2-history-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 16px;
+		row-gap: 22px;
+	}
+
+	.about-v2-history-item h3 {
+		font-size: 21px;
+	}
+
+	.about-v2-history-item p {
+		font-size: 12px;
+	}
+}
