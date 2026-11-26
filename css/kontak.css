@@ -1,0 +1,683 @@
+/* =========================================================
+   KEMATIF - HALAMAN KONTAK
+   ========================================================= */
+
+/* Identitas brand pada navbar */
+.contact-brand {
+	width: auto;
+	min-width: 190px;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.contact-brand-mark {
+	width: 36px;
+	height: 36px;
+	flex: 0 0 36px;
+	display: grid;
+	place-items: center;
+	border-radius: 10px;
+	color: #ffffff;
+	background: linear-gradient(145deg, #10b2df, #0087bd);
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.contact-brand-copy {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.15;
+}
+
+.contact-brand-copy strong {
+	color: #092c4b;
+	font-size: 14px;
+	font-weight: 800;
+}
+
+.contact-brand-copy small {
+	margin-top: 3px;
+	color: #718296;
+	font-size: 9px;
+	white-space: nowrap;
+}
+
+.contact-nav-join {
+	flex: 0 0 auto;
+	padding: 10px 17px;
+	border-radius: 999px;
+	white-space: nowrap;
+}
+
+/* Lebar konten halaman kontak */
+.contact-container.container {
+	width: min(88%, 1180px);
+	max-width: 1180px;
+}
+
+/* Hero */
+.contact-hero {
+	overflow: hidden;
+	background: linear-gradient(115deg, #ffffff 0%, #f4fbfe 45%, #e7f6fc 100%);
+}
+
+.contact-hero-inner {
+	min-height: 335px;
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	align-items: center;
+	gap: 50px;
+	padding-top: 34px;
+	padding-bottom: 38px;
+}
+
+.contact-hero-copy {
+	min-width: 0;
+	padding: 8px 0;
+}
+
+.contact-breadcrumb {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 16px;
+	color: #68798b;
+	font-size: 13px;
+}
+
+.contact-breadcrumb a:hover {
+	color: #009bd2;
+}
+
+.contact-eyebrow {
+	display: block;
+	margin-bottom: 14px;
+	color: #009bd2;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.65px;
+}
+
+.contact-eyebrow::before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 2px;
+	margin-right: 9px;
+	vertical-align: middle;
+	border-radius: 3px;
+	background: #00a5db;
+}
+
+.contact-hero-copy h1 {
+	margin: 0 0 14px;
+	color: #092c4b;
+	font-size: clamp(42px, 4.2vw, 60px);
+	font-weight: 800;
+	line-height: 1.08;
+	letter-spacing: -2px;
+}
+
+.contact-hero-description {
+	max-width: 540px;
+	margin: 0;
+	color: #566b7e;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.contact-hero-visual {
+	position: relative;
+	width: 100%;
+	max-width: 390px;
+	height: 265px;
+	justify-self: end;
+}
+
+.contact-hero-backdrop {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 82%;
+	height: 84%;
+	border-radius: 20px;
+	background: linear-gradient(140deg, #0ba9d8, #0086b8);
+}
+
+.contact-photo-placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 82%;
+	height: 84%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 20px;
+	color: #009bd2;
+	background: linear-gradient(145deg, #e8f6fc, #cceaf6);
+	box-shadow: 0 9px 20px rgba(8, 42, 70, 0.12);
+	text-align: center;
+}
+
+.contact-photo-placeholder svg,
+.contact-map-placeholder svg {
+	width: 28px;
+	height: 28px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.contact-photo-placeholder small {
+	margin-top: 9px;
+	font-size: 11px;
+}
+
+.contact-photo-placeholder img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Panel peta dan kartu lokasi */
+.contact-main {
+	padding-top: 52px;
+	padding-bottom: 54px;
+}
+
+/* =====================================================
+   KONTAK - AREA PETA DAN INFORMASI LOKASI
+   ===================================================== */
+
+/* Panel utama yang membungkus kartu dan peta */
+.contact-map-panel {
+	display: grid;
+	grid-template-columns: minmax(320px, 0.75fr) minmax(0, 1.8fr);
+	align-items: stretch;
+	gap: 28px;
+
+	width: 100%;
+	min-height: 420px;
+	padding: 30px;
+
+	position: relative;
+	overflow: hidden;
+
+	background: linear-gradient(135deg, #eaf8fd, #cfeef9);
+
+	border-radius: 28px;
+	box-shadow: 0 12px 30px rgba(9, 44, 75, 0.08);
+}
+
+/* Kartu informasi lokasi di sebelah kiri */
+.contact-location-card {
+	grid-column: 1;
+	grid-row: 1;
+
+	width: 100%;
+	height: fit-content;
+	align-self: center;
+
+	position: relative;
+	z-index: 2;
+
+	margin: 0;
+	padding: 25px;
+
+	background: #ffffff;
+	border-radius: 22px;
+
+	box-shadow: 0 10px 25px rgba(9, 44, 75, 0.1);
+}
+
+/* Area peta Google Maps di sebelah kanan */
+.contact-map-placeholder {
+	grid-column: 2;
+	grid-row: 1;
+
+	width: 100%;
+	min-width: 0;
+	min-height: 360px;
+
+	position: relative;
+	overflow: hidden;
+
+	background: #d5edf7;
+	border-radius: 22px;
+}
+
+/* Google Maps memenuhi area yang tersedia */
+.contact-map-placeholder iframe {
+	position: absolute;
+	inset: 0;
+
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	border: 0;
+}
+
+/* =====================================================
+   RESPONSIVE TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+	.contact-map-panel {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 22px;
+		padding: 24px;
+	}
+
+	.contact-location-card {
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+	}
+
+	.contact-map-placeholder {
+		grid-column: 1;
+		grid-row: 2;
+		min-height: 330px;
+	}
+}
+
+/* =====================================================
+   RESPONSIVE HP
+   ===================================================== */
+
+@media (max-width: 600px) {
+	.contact-map-panel {
+		padding: 16px;
+		gap: 18px;
+		border-radius: 20px;
+	}
+
+	.contact-location-card {
+		padding: 20px;
+		border-radius: 17px;
+	}
+
+	.contact-map-placeholder {
+		min-height: 280px;
+		border-radius: 17px;
+	}
+}
+
+.contact-location-card h2,
+.contact-about-card h2,
+.contact-social-card h2 {
+	margin: 0 0 14px;
+	color: #092c4b;
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: -0.3px;
+}
+
+.contact-info-item {
+	display: grid;
+	grid-template-columns: 34px minmax(0, 1fr);
+	align-items: start;
+	gap: 10px;
+	margin-top: 11px;
+}
+
+.contact-info-icon {
+	width: 34px;
+	height: 34px;
+	display: grid;
+	place-items: center;
+	border-radius: 10px;
+	color: #008fc7;
+	background: #eaf7fc;
+}
+
+.contact-info-icon svg {
+	width: 18px;
+	height: 18px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.contact-info-label {
+	display: block;
+	margin: 0 0 2px;
+	color: #009bd2;
+	font-size: 9px;
+	font-weight: 600;
+	letter-spacing: 0.35px;
+	text-transform: uppercase;
+}
+
+.contact-info-item p {
+	margin: 0;
+	color: #173751;
+	font-size: 11px;
+	line-height: 1.55;
+	overflow-wrap: anywhere;
+}
+
+.contact-info-item p a:hover {
+	color: #008fc7;
+}
+
+.contact-map-button {
+	width: 100%;
+	min-height: 38px;
+	margin-top: 13px;
+	padding: 10px 14px;
+}
+
+/* Tentang KEMATIF dan tautan media sosial */
+.contact-bottom-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px;
+	margin-top: 20px;
+}
+
+.contact-about-card,
+.contact-social-card {
+	min-width: 0;
+	min-height: 214px;
+	padding: 24px;
+	border-radius: 21px;
+}
+
+.contact-about-card {
+	color: #ffffff;
+	background: linear-gradient(125deg, #092940, #12466d);
+}
+
+.contact-about-card h2 {
+	margin-bottom: 9px;
+	color: #ffffff;
+}
+
+.contact-about-card p {
+	margin: 0;
+	color: #d0dfeb;
+	font-size: 11px;
+	line-height: 1.75;
+}
+
+.contact-social-card {
+	border: 1px solid #e0eaf2;
+	background: #ffffff;
+	box-shadow: 0 4px 12px rgba(9, 44, 75, 0.04);
+}
+
+.contact-social-card h2 {
+	margin-bottom: 10px;
+}
+
+.contact-social-link {
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	margin-top: 10px;
+	padding: 9px 12px;
+	border: 1px solid #e0eaf2;
+	border-radius: 15px;
+	background: #f8fafc;
+	transition:
+		border-color 0.2s ease,
+		background 0.2s ease,
+		transform 0.2s ease;
+}
+
+.contact-social-link:hover {
+	transform: translateY(-2px);
+	border-color: #a9dfee;
+	background: #f1faff;
+}
+
+.contact-social-icon {
+	width: 36px;
+	height: 36px;
+	flex: 0 0 36px;
+	display: grid;
+	place-items: center;
+	border-radius: 10px;
+	color: #ffffff;
+	background: linear-gradient(145deg, #10b2df, #0087bd);
+}
+
+.contact-social-icon svg {
+	width: 21px;
+	height: 21px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.contact-social-icon .contact-social-dot {
+	fill: currentColor;
+	stroke: none;
+}
+
+.contact-social-copy {
+	min-width: 0;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.contact-social-copy strong {
+	color: #092c4b;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.contact-social-copy small {
+	margin-top: 2px;
+	color: #718296;
+	font-size: 10px;
+}
+
+.contact-social-arrow {
+	color: #7c8fa1;
+	font-size: 14px;
+	transition: color 0.2s ease;
+}
+
+.contact-social-link:hover .contact-social-arrow {
+	color: #008fc7;
+}
+
+/* Footer memakai struktur footer bersama dari style.css */
+.contact-footer {
+	padding-top: 47px;
+}
+
+.contact-footer-heading {
+	display: block;
+	margin-bottom: 10px;
+	color: #00b5e8;
+	font-size: 10px;
+	letter-spacing: 0.55px;
+	text-transform: uppercase;
+}
+
+.contact-footer .footer-contact p a:hover {
+	color: #ffffff;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+	.contact-hero-inner {
+		gap: 28px;
+	}
+
+	.contact-hero-copy h1 {
+		font-size: 43px;
+	}
+
+	.contact-location-card {
+		width: 290px;
+	}
+
+	.contact-bottom-grid {
+		gap: 14px;
+	}
+
+	.contact-about-card,
+	.contact-social-card {
+		padding: 20px;
+	}
+}
+
+/* Tablet potret dan mobile */
+@media (max-width: 700px) {
+	.contact-container.container {
+		width: 90%;
+		max-width: none;
+	}
+
+	.contact-brand {
+		min-width: 0;
+		width: auto;
+	}
+
+	.contact-brand-mark {
+		width: 32px;
+		height: 32px;
+		flex-basis: 32px;
+	}
+
+	.contact-brand-copy strong {
+		font-size: 12px;
+	}
+
+	.contact-brand-copy small {
+		font-size: 8px;
+	}
+
+	.contact-nav-join {
+		padding: 9px 12px;
+		font-size: 10px;
+	}
+
+	.contact-hero-inner {
+		min-height: auto;
+		grid-template-columns: 1fr;
+		gap: 24px;
+		padding-top: 30px;
+		padding-bottom: 32px;
+	}
+
+	.contact-hero-copy h1 {
+		font-size: 37px;
+		letter-spacing: -1.3px;
+	}
+
+	.contact-hero-description {
+		font-size: 14px;
+	}
+
+	.contact-hero-visual {
+		width: min(100%, 390px);
+		height: 220px;
+		justify-self: center;
+	}
+
+	.contact-main {
+		padding-top: 35px;
+		padding-bottom: 40px;
+	}
+
+	.contact-map-panel {
+		min-height: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		padding: 15px;
+		border-radius: 20px;
+	}
+
+	.contact-location-card {
+		order: 0;
+		width: 100%;
+		margin: 0;
+		padding: 19px;
+	}
+
+	.contact-map-placeholder {
+		position: relative;
+		inset: auto;
+		order: 1;
+		min-height: 155px;
+		padding: 20px 10px;
+		border-radius: 15px;
+		background: rgba(255, 255, 255, 0.25);
+	}
+
+	.contact-bottom-grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+		margin-top: 15px;
+	}
+
+	.contact-about-card,
+	.contact-social-card {
+		min-height: 0;
+		padding: 22px;
+	}
+
+	.contact-about-card p {
+		font-size: 12px;
+	}
+
+	.contact-footer {
+		padding-top: 40px;
+	}
+}
+
+/* HP kecil */
+@media (max-width: 420px) {
+	.contact-container.container {
+		width: 92%;
+	}
+
+	.contact-hero-copy h1 {
+		font-size: 32px;
+	}
+
+	.contact-hero-visual {
+		height: 190px;
+	}
+
+	.contact-location-card,
+	.contact-about-card,
+	.contact-social-card {
+		padding: 17px;
+	}
+
+	.contact-info-item {
+		grid-template-columns: 32px minmax(0, 1fr);
+		gap: 9px;
+	}
+
+	.contact-social-link {
+		padding-right: 9px;
+		padding-left: 9px;
+	}
+}
+
+@view-transition {
+	navigation: auto;
+}
