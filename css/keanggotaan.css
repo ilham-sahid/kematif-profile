@@ -694,3 +694,25 @@
 		padding: 10px 11px;
 	}
 }
+
+.membership-register {
+	display: inline-block; /* Agar margin-top berfungsi */
+	margin-top: 10px; /* Memberi jarak dari teks di atasnya */
+	color: #0284c7; /* Warna biru cerah senada dengan badge angka 1 */
+	font-weight: 600; /* Sedikit lebih tebal agar menonjol */
+	text-decoration: underline; /* Menandakan elemen bisa diklik */
+	text-underline-offset: 4px; /* Jarak garis bawah agar rapi */
+	cursor: pointer;
+}
+.membership-register:hover {
+	color: #0369a1; /* Warna lebih gelap saat kursor diarahkan */
+}
+
+.membership-register.disable {
+	display: inline-block; /* Memisahkan dari teks di atasnya */
+	margin-top: 10px; /* Memberi jarak vertikal */
+	color: #94a3b8; /* Abu-abu lebih terang/pudar dari teks deskripsi */
+	font-weight: 500;
+	text-decoration: none;
+	pointer-events: none; /* Mematikan klik */
+}
